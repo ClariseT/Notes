@@ -2,14 +2,14 @@
 	import Dashboard from "./components/Dashboard.svelte";
 	import Header from "./components/Header.svelte";
 
-	import { v4 } from "uuid";
+	import {v4} from 'uuid';
 
 
 	let notes = [
 	{
 		id: 0,
 		title: 'Vacaciones',
-		color: 'gray',
+		color: 'peru',
 		text: 'Hola!'
 	}
 ];
@@ -36,13 +36,11 @@ function generateColor() { /*Elijo de forma aleatoria del arreglo*/
 	
 }
 
-function handleUpdate(e) {   /* e=event | n=note (n=funct |n=var)*/
+function handleUpdate(e) {   
 	const note = e.detail;
-	const index = notes.findIndex(note => note.id === note.id);
-	notes[index] = note;
-	copyNotes = [...notes];
-
-	
+	const index = notes.findIndex(note => note.id === e.detail.id);
+	notes[index] = e.detail;
+		
 }
 
 
@@ -83,9 +81,9 @@ function handleSearch(e) {
 
 
 <main>
-	<Header on:input={handleSearch}>
+	<Header on:input={handleSearch}/>
 	<div class="count-notes"> 
-		{count} notas
+		<b>	{count} notas </b>
 	</div>
 	
 	<Dashboard 
@@ -101,12 +99,14 @@ function handleSearch(e) {
 <style>
 	:global(body){
 		background-color:transparent;
-		background-image: url('');
+		font-family: 'Courier New', Courier, monospace;
 	}
 
 	.count-notes{
 		padding: 20px 20px 0 20px;
 		text-align: right;
+		color: cornflowerblue;
+		font-size: 16px;
 	}
 	
 </style>

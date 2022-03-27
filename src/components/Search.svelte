@@ -9,6 +9,8 @@
 
 <style>
     input{
-        width:500px ;
+        width:400px ;
+        margin: 12px;
+        border-radius: 15px;
     }
 </style>

@@ -6,7 +6,7 @@ import Settings from "./Settings.svelte";
 
 
 <div class="Header">
-    <Logo appName="Notitas"/>
+    <Logo appName="Notas"/>
     <Search on:input/>
     <Settings/>
     
@@ -14,6 +14,13 @@ import Settings from "./Settings.svelte";
 
 
 <style>
+    .Header{
+        background-color: rgba(0, 38, 255, 0.178);
+        border-radius: 10px; 
+        margin: 18px;
+        padding: 12px;
+    }
+
     
 
 </style>

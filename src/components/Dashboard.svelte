@@ -1,8 +1,9 @@
 <script>
-    export let notes=[];
-
     import Note from "./Note.svelte";
     import NotePlaceholder from "./NotePlaceholder.svelte";
+
+    export let notes=[];
+
 </script>
 
 
@@ -10,7 +11,7 @@
     <div class="notes_container">
         <NotePlaceholder on:click/> <!--se propaga a app-->
         {#each notes as {id, title, color, text}}   <!--el prop y la var es la misma-->
-        <Note {id} bind:title={title} {color} bind:text={text} on:update on:color on:remove/>
+            <Note {id} bind:title={title} {color} bind:text={text} on:update on:color on:remove/>
         {/each}
     </div>
 
