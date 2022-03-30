@@ -108,5 +108,6 @@ function handleSearch(e) {
 		color: cornflowerblue;
 		font-size: 16px;
 	}
+
 	
 </style>

@@ -44,14 +44,14 @@ function handleRemove() {
                 </button>
             </div>
         </div>
-    </div>
 
-
-    <div class="content">
-        <div class="Title">
-            <input placeholder="Titulo"  bind:value={title} on:input/>
+        <div class="content">
+            <div class="Title">
+                <input placeholder="Titulo"  bind:value={title}/>
+            </div>
+            <textarea placeholder="Texto.." cols="30" rows="10" bind:value={text} ></textarea>
         </div>
-        <textarea placeholder="Texto.." cols="30" rows="10" bind:value={text} ></textarea>
+
     </div>
 
 </div>
